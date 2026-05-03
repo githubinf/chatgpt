@@ -88,11 +88,11 @@ export default function App() {
                 onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-md text-lg font-bold transition-all transform hover:scale-105 shadow-2xl shadow-emerald-600/20 flex items-center gap-3 cursor-pointer"
               >
-                ACCEDE AL PLANO AHORA
+                OBTENER ACCESO AL PLANO
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
               <p className="text-xs text-neutral-500 uppercase tracking-widest flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-500" /> GARANTÍA TOTAL DE 30 DÍAS
+                <ShieldCheck className="w-4 h-4 text-emerald-500" /> GARANTÍA DE SATISFACCIÓN DE 30 DÍAS
               </p>
             </motion.div>
           </div>
@@ -108,7 +108,7 @@ export default function App() {
                 src="https://i.ibb.co/LDrzycGZ/como-ganar-dinero-con-chatgpt.png" 
                 alt="Portada del libro Cómo ganar dinero con ChatGPT" 
                 referrerPolicy="no-referrer"
-                className="relative rounded-lg shadow-2xl max-w-[300px] lg:max-w-[400px] transform hover:-rotate-2 transition-transform duration-500"
+                className="relative max-w-[320px] lg:max-w-[450px] transform hover:-rotate-1 transition-transform duration-500"
               />
             </div>
           </motion.div>
@@ -130,6 +130,19 @@ export default function App() {
           <p className="text-lg leading-loose mb-12">
             Tu contenido de la semana está generado, revisado y programado. Tus asistentes virtuales calificados están filtrando clientes potenciales y agendando reuniones mientras tomas café. Un producto digital que creaste hace dos meses sigue generando ventas mientras tú te enfocas en lo que realmente importa: estrategia, innovación o simplemente disfrutar de tu tiempo.
           </p>
+          
+          <div className="space-y-6 text-neutral-400 mb-16">
+            <p>
+              Este no es el típico escenario de "libertad financiera" que ves en anuncios de YouTube. Es la realidad técnica de quienes han dejado de usar la IA como un juguete y han empezado a tratarla como una infraestructura de servidor.
+            </p>
+            <p>
+              La mayoría de los emprendedores están agotados. Están intentando ser creadores de contenido, estrategas de marketing, agentes de soporte y directores comerciales al mismo tiempo. Es humanamente imposible mantener ese ritmo sin sacrificar calidad o salud mental.
+            </p>
+            <p>
+              Ahí es donde entran los sistemas. Un sistema es un proceso que funciona de manera predecible, repetible y escalable. ChatGPT no es solo un chat; es el motor cognitivo más potente jamás creado, capaz de ejecutar esos procesos por ti, si sabes cómo darle las instrucciones adecuadas.
+            </p>
+          </div>
+
           <div className="bg-neutral-900 border border-neutral-800 p-12 rounded-lg text-center mb-16">
             <h3 className="font-display text-3xl font-bold text-white mb-6 underline decoration-emerald-500 decoration-3 underline-offset-8">¿Magia?</h3>
             <p className="text-4xl font-black text-emerald-500 uppercase tracking-tighter">No. Sistemas.</p>
@@ -452,7 +465,7 @@ export default function App() {
               <a 
                 href="https://fcofrancis.pay.clickbank.net/?cbitems=14"
                 target="_blank"
-                rel="no-referrer"
+                rel="noopener noreferrer"
                 className="group w-full max-w-md bg-emerald-500 hover:bg-emerald-400 text-black py-6 rounded font-black text-xl transition-all flex items-center justify-center gap-4 shadow-xl shadow-emerald-500/30"
               >
                 <Lock className="w-6 h-6" />
