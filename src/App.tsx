@@ -42,54 +42,75 @@ export default function App() {
       <nav className="fixed top-0 w-full z-40 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-sm font-medium tracking-wide">
           <span className="font-display font-bold text-emerald-500 italic uppercase">Sistemas IA</span>
-          <a href="#cta" className="bg-emerald-600 hover:bg-emerald-500 transition-colors px-4 py-2 rounded text-white font-semibold">
+          <button 
+            onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-emerald-600 hover:bg-emerald-500 transition-colors px-4 py-2 rounded text-white font-semibold cursor-pointer"
+          >
             OBTENER EL LIBRO
-          </a>
+          </button>
         </div>
       </nav>
 
       {/* Hero Section */}
       <header className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.span 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="inline-block text-emerald-400 font-display font-semibold tracking-[0.2em] uppercase text-xs mb-6 border border-emerald-500/30 px-3 py-1 rounded-full bg-emerald-500/5 shadow-[0_0_15px_rgba(16,185,129,0.1)]"
-          >
-            Sistemas Automatizados con IA
-          </motion.span>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-5xl md:text-7xl font-display font-black text-white leading-tight mb-8"
-          >
-            CÓMO GANAR <span className="text-emerald-500">DINERO</span> CON CHATGPT
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
-          >
-            No es otro tutorial de prompts mágicos. Es un plano técnico para construir un <span className="text-white font-medium italic">sistema de ingresos automático</span> diseñado para profesionales y emprendedores digitales.
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="flex flex-col items-center gap-6"
-          >
-            <a 
-              href="#cta"
-              className="group bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-md text-lg font-bold transition-all transform hover:scale-105 shadow-2xl shadow-emerald-600/20 flex items-center gap-3"
+        <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
+          <div className="text-left">
+            <motion.span 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="inline-block text-emerald-400 font-display font-semibold tracking-[0.2em] uppercase text-xs mb-6 border border-emerald-500/30 px-3 py-1 rounded-full bg-emerald-500/5 shadow-[0_0_15px_rgba(16,185,129,0.1)]"
             >
-              ACCEDE AL PLANO AHORA
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            <p className="text-xs text-neutral-500 uppercase tracking-widest flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-500" /> GARANTÍA TOTAL DE 30 DÍAS
-            </p>
+              Sistemas Automatizados con IA
+            </motion.span>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-5xl lg:text-7xl font-display font-black text-white leading-tight mb-8"
+            >
+              CÓMO GANAR <span className="text-emerald-500">DINERO</span> CON CHATGPT
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-lg md:text-xl text-neutral-400 max-w-xl mb-10 leading-relaxed font-light"
+            >
+              No es otro tutorial de prompts mágicos. Es un plano técnico para construir un <span className="text-white font-medium italic">sistema de ingresos automático</span> diseñado para profesionales y emprendedores digitales.
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col items-start gap-6"
+            >
+              <button 
+                onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-md text-lg font-bold transition-all transform hover:scale-105 shadow-2xl shadow-emerald-600/20 flex items-center gap-3 cursor-pointer"
+              >
+                ACCEDE AL PLANO AHORA
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </button>
+              <p className="text-xs text-neutral-500 uppercase tracking-widest flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-emerald-500" /> GARANTÍA TOTAL DE 30 DÍAS
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.8, duration: 1 }}
+            className="relative flex justify-center md:justify-end"
+          >
+            <div className="relative group">
+              <img 
+                src="https://i.ibb.co/LDrzycGZ/como-ganar-dinero-con-chatgpt.png" 
+                alt="Portada del libro Cómo ganar dinero con ChatGPT" 
+                referrerPolicy="no-referrer"
+                className="relative rounded-lg shadow-2xl max-w-[300px] lg:max-w-[400px] transform hover:-rotate-2 transition-transform duration-500"
+              />
+            </div>
           </motion.div>
         </div>
 
@@ -252,6 +273,15 @@ export default function App() {
             <MethodItem number="06" name="D.I.R.I.G.E." label="Servicios Profesionales" description="Sistematización de consultorías y agencias para maximizar el margen de beneficio por cliente atendido." />
             <MethodItem number="07" name="I.N.G.R.E.S.O.S." label="Diversificación Sinfónica" description="Cómo conectar diferentes fuentes de ingreso para que trabajen en conjunto, creando una red de seguridad financiera." />
             <MethodItem number="08" name="E.S.C.A.L.A." label="Crecimiento Sostenible" description="El plan por etapas para aumentar el volumen de negocio sin colapsar la estructura operativa ni el servicio al cliente." />
+          </div>
+
+          <div className="mt-16 text-center">
+            <button 
+              onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 border-2 border-emerald-500 text-emerald-500 font-bold rounded-lg hover:bg-emerald-500 hover:text-black transition-all cursor-pointer"
+            >
+              QUIERO ESTAS METODOLOGÍAS
+            </button>
           </div>
         </div>
       </section>
@@ -419,10 +449,15 @@ export default function App() {
             </div>
 
             <div className="flex flex-col items-center gap-8">
-              <button className="group w-full max-w-md bg-emerald-500 hover:bg-emerald-400 text-black py-6 rounded font-black text-xl transition-all flex items-center justify-center gap-4 shadow-xl shadow-emerald-500/30">
+              <a 
+                href="https://fcofrancis.pay.clickbank.net/?cbitems=14"
+                target="_blank"
+                rel="no-referrer"
+                className="group w-full max-w-md bg-emerald-500 hover:bg-emerald-400 text-black py-6 rounded font-black text-xl transition-all flex items-center justify-center gap-4 shadow-xl shadow-emerald-500/30"
+              >
                 <Lock className="w-6 h-6" />
                 SÍ, QUIERO EL SISTEMA AHORA
-              </button>
+              </a>
               
               <div className="flex flex-wrap justify-center gap-8 text-neutral-500 text-sm font-medium uppercase tracking-[0.2em]">
                 <span className="flex items-center gap-2 tracking-widest"><Cpu className="w-4 h-4" /> IA Optimizada</span>
@@ -443,7 +478,14 @@ export default function App() {
             <p className="text-lg text-neutral-400 leading-relaxed italic mb-8">
               "Compra el libro. Léelo. Aplica los primeros ejercicios. Si en los próximos 30 días no sientes que este contenido te ha entregado herramientas técnicas claras, métodos aplicables y un plan real para generar ingresos con ChatGPT… te devuelvo cada centavo."
             </p>
-            <p className="font-bold text-white uppercase tracking-[0.2em] text-sm">Sin condiciones. Sin preguntas incómodas.</p>
+            <p className="font-bold text-white uppercase tracking-[0.2em] text-sm mb-12">Sin condiciones. Sin preguntas incómodas.</p>
+            
+            <button 
+              onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-neutral-900 border border-neutral-700 px-8 py-4 rounded text-neutral-300 font-bold hover:border-emerald-500 hover:text-emerald-500 transition-all cursor-pointer"
+            >
+              PROBAR SIN RIESGO
+            </button>
           </motion.div>
         </div>
       </section>
