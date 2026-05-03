@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --color-primary: #10b981; /* Emerald 500 */
+  --color-dark: #0a0a0a;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: #f5f5f5;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #f5f5f5 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.markdown-body p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.markdown-body h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+::selection {
+  background-color: #10b981;
+  color: #0a0a0a;
+}
